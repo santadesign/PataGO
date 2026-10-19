@@ -91,6 +91,11 @@ dialog{border:0;border-radius:24px;padding:28px;max-width:400px;width:calc(100% 
 dialog::backdrop{background:rgba(5,20,10,.55)}
 dialog h3{font-size:28px;margin-bottom:6px}
 .navbtns{display:flex;gap:8px}
+.demo-note{font-size:14px;color:var(--muted);margin:0;flex-basis:100%}
+.demo-badge{position:absolute;top:12px;left:12px}
+.card .tag{display:inline-block}
+.na form{text-align:left}
+.na label:first-of-type{margin-top:4px}
 .na{text-align:center}.na .em{width:68px;height:68px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:32px;margin:0 auto 14px}
 dialog label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
 dialog input,dialog select{width:100%;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:16px Figtree}
@@ -124,13 +129,13 @@ section{padding:52px 0;text-align:center}section h2,.sub{margin-left:auto;margin
     <h1>Seu pet passeia. Você acompanha <span>em tempo real.</span></h1>
     <p class="lead">Peça um passeador agora ou agende para a semana toda. Preço fixo, pagamento no app e GPS ao vivo do começo ao fim.</p>
     <div class="cta">
-      <button class="btn" data-open>Pedir um passeio</button>
+      <button class="btn" data-open="passeios">Pedir um passeio</button>
       <a class="btn ghost" href="#como">Ver como funciona</a>
     </div>
     <div class="proof">
       <div><strong>4,9 ★</strong>nota média</div>
       <div><strong>R$ 25</strong>passeio de 30 min</div>
-      <div><strong>2 min</strong>para aceitar</div>
+      <div><strong>2 min</strong>para aceitar</div><p class="demo-note">Números e exemplos desta página são apenas demonstração.</p>
     </div>
   </div>
 
@@ -145,7 +150,7 @@ section{padding:52px 0;text-align:center}section h2,.sub{margin-left:auto;margin
         <path id="route" d="M60 200 C90 150 140 170 160 120 S240 70 290 110 S320 190 330 200" stroke="var(--green)" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round" fill="none"/>
         <circle cx="60" cy="200" r="7" fill="var(--ink)"/>
       </svg>
-      <div class="pin" id="pin">🐕</div>
+      <div class="pin" id="pin">🐕</div><span class="tag demo-badge">Demonstração</span>
     </div>
     <div class="panel">
       <div class="seg" role="group" aria-label="Quando">
@@ -191,11 +196,11 @@ section{padding:52px 0;text-align:center}section h2,.sub{margin-left:auto;margin
 
 <section id="planos">
   <h2>Pacotes para quem passeia sempre</h2>
-  <p class="sub">Preço fixo por tempo. Quanto mais passeios, menos você paga por cada um.</p>
+  <p class="sub">Preço fixo por tempo. Quanto mais passeios, menos você paga por cada um. Valores de demonstração, ainda não definidos.</p>
   <div class="plans">
-    <div class="plan"><h3>Avulso</h3><div class="p">R$ 25<small> /30 min</small></div><ul><li>Peça na hora ou agende</li><li>R$ 40 para 60 min</li><li>Sem compromisso</li></ul><button class="btn ghost" data-open>Pedir passeio</button></div>
-    <div class="plan hot"><span class="tag">Mais escolhido</span><h3>Semanal</h3><div class="p">R$ 105<small> /semana</small></div><ul><li>5 passeios de 30 min</li><li>R$ 21 por passeio</li><li>Mesmo passeador, se quiser</li></ul><button class="btn" data-open>Assinar semanal</button></div>
-    <div class="plan"><h3>Mensal</h3><div class="p">R$ 399<small> /mês</small></div><ul><li>20 passeios de 30 min</li><li>R$ 20 por passeio</li><li>Reagende sem custo</li></ul><button class="btn ghost" data-open>Assinar mensal</button></div>
+    <div class="plan"><h3>Avulso</h3><div class="p">R$ 25<small> /30 min</small></div><ul><li>Peça na hora ou agende</li><li>R$ 40 para 60 min</li><li>Sem compromisso</li></ul><button class="btn ghost" data-open="passeios">Pedir passeio</button></div>
+    <div class="plan hot"><span class="tag">Mais escolhido</span><h3>Semanal</h3><div class="p">R$ 105<small> /semana</small></div><ul><li>5 passeios de 30 min</li><li>R$ 21 por passeio</li><li>Mesmo passeador, se quiser</li></ul><button class="btn" data-open="passeios">Assinar semanal</button></div>
+    <div class="plan"><h3>Mensal</h3><div class="p">R$ 399<small> /mês</small></div><ul><li>20 passeios de 30 min</li><li>R$ 20 por passeio</li><li>Reagende sem custo</li></ul><button class="btn ghost" data-open="passeios">Assinar mensal</button></div>
   </div>
 </section>
 
@@ -203,12 +208,12 @@ section{padding:52px 0;text-align:center}section h2,.sub{margin-left:auto;margin
   <h2>Tudo registrado, tudo avaliado</h2>
   <div class="grid2">
     <div class="card">
-      <div class="stars">★★★★★</div>
+      <span class="tag">Demonstração</span><div class="stars" style="margin-top:10px">★★★★★</div>
       <p style="margin:10px 0 14px;font-size:19px">“A Carol mandou foto do Thor em cada parada e o trajeto apareceu certinho no mapa.”</p>
       <span style="color:var(--muted)">Marina, tutora do Thor</span>
     </div>
     <div class="card">
-      <h3 style="font-size:22px">Histórico de passeios</h3>
+      <h3 style="font-size:22px">Histórico de passeios <span class="tag">Demonstração</span></h3>
       <div class="hist">
         <div><b>Thor · Carol</b><span>Hoje · 30 min · 1,8 km</span></div>
         <div><b>Thor · Rafael</b><span>Ontem · 60 min · 3,2 km</span></div>
@@ -221,16 +226,24 @@ section{padding:52px 0;text-align:center}section h2,.sub{margin-left:auto;margin
 <div class="final">
   <h2>Pronto para o primeiro passeio?</h2>
   <p class="sub" style="margin:0 auto">Cadastre-se grátis e peça seu primeiro passeio hoje.</p>
-  <div class="cta"><button class="btn" data-open>Criar conta de tutor</button><button class="btn ghost" data-open>Quero ser passeador</button></div>
+  <div class="cta"><button class="btn" data-open="passeios">Criar conta de tutor</button><button class="btn ghost" data-open="passeador">Quero ser passeador</button></div>
 </div>
 
 <footer><span>© 2026 PataGO. MVP para testes.</span><span>Feito com carinho para pets e tutores.</span></footer>
 </div>
 
 <dialog id="dlg">
-  <div class="na"><div class="em">📍</div><h3>Ainda não disponível na sua região</h3>
-  <p style="color:var(--muted);margin:8px 0 22px">O PataGO está chegando por aí. Em breve você poderá pedir passeios para o seu pet.</p>
-  <button class="btn" style="width:100%" id="ok">Entendi</button></div>
+  <div class="na"><div class="em">📍</div><h3>Estamos preparando o lançamento na sua região</h3>
+  <p style="color:var(--muted);margin:8px 0 16px">Cadastre-se para acompanhar as novidades.</p>
+  <form id="lead">
+<label for="ln">Nome</label><input id="ln" required autocomplete="given-name" placeholder="Seu nome">
+<label for="lb">Bairro em São Paulo</label><input id="lb" required placeholder="Ex.: Vila Mariana">
+<label for="ld">Você tem cachorro?</label><select id="ld" required><option value="">Selecione</option><option>Sim</option><option>Não</option></select>
+<label for="li">Seu interesse</label><select id="li" required><option value="">Selecione</option><option value="passeios">Encontrar passeios</option><option value="passeador">Ser passeador</option><option value="ambos">Os dois</option></select>
+<button class="btn" style="width:100%;margin-top:18px" type="submit">Quero acompanhar as novidades</button>
+<button class="btn ghost" style="width:100%;margin-top:8px" type="button" id="ok">Fechar</button>
+</form>
+<div id="thanks" hidden><p><b>Obrigado, <span id="tName"></span>!</b><br>Seu interesse foi anotado. Esta é uma versão de teste: os dados ainda não são armazenados.</p><button class="btn" style="width:100%" id="ok2">Fechar</button></div></div>
 </dialog>
 <div class="toast" id="toast" role="status"></div>
 
@@ -238,8 +251,10 @@ section{padding:52px 0;text-align:center}section h2,.sub{margin-left:auto;margin
 const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 const dlg=$('#dlg'),toast=$('#toast');
 function say(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2600)}
-$$('[data-open]').forEach(b=>b.addEventListener('click',()=>dlg.showModal()));
-$('#ok').onclick=()=>dlg.close();
+const lead=$('#lead'),thanks=$('#thanks');
+$$('[data-open]').forEach(b=>b.addEventListener('click',()=>{lead.reset();lead.hidden=false;thanks.hidden=true;if(b.dataset.open)$('#li').value=b.dataset.open;dlg.showModal()}));
+$('#ok').onclick=$('#ok2').onclick=()=>dlg.close();
+lead.addEventListener('submit',e=>{e.preventDefault();$('#tName').textContent=$('#ln').value.trim().split(' ')[0];lead.hidden=true;thanks.hidden=false});
 
 let mode='now',price=25,timer;
 const label=()=>$('#go').textContent=mode==='now'?'Pedir passeio agora':'Agendar para amanhã, 9h';
